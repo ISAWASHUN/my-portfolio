@@ -21,7 +21,7 @@ const Header = () => {
           <ul className='flex flex-col space-y-4 items-center md:flex-row md:space-x-5 md:space-y-0'>
             {headerData.map((item) => (
               <li key={item.id} className="list-none text-2xl">
-                <a href={item.link} className="text-base hover:text-blue-500">
+                <a href={item.link} className="text-base hover:text-green-500">
                   {item.title}
                 </a>
               </li>
