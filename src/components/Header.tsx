@@ -10,7 +10,9 @@ const Header = () => {
     <header className="p-4">
       <div className="container mx-auto flex justify-between items-center transition duration-500 ease-in-out">
       <h1 className="hidden sm:block ml-8 lg:text-3xl lg:transition-transform lg:duration-500">
-          <a href="/">Logo</a>
+      <a href="/">
+        <img src='/profile_logo.png' alt='logo' className='h-auto w-10'/>
+      </a>
       </h1>
         <div className="md:hidden flex ">
           <button onClick={() => setIsOpen(!isOpen)} className="text-xl z-50">
