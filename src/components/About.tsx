@@ -21,14 +21,14 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center space-x-6 mt-6">
+      <div className="flex justify-center items-center space-x-7 mt-6">
         <a href="https://twitter.com/dosukoi_org" target="_blank" rel="noopener noreferrer" className='text-blue-500'>
           <FaTwitter className="w-10 h-10" />
         </a>
         <a href="https://github.com/ISAWASHUN" target="_blank" rel="noopener noreferrer" className='text-black'>
           <FaGithub className="w-10 h-10" />
         </a>
-        <a href="https://zenn.dev/isawa" target="_blank" rel="noopener noreferrer" className=''>
+        <a href="https://zenn.dev/isawa" target="_blank" rel="noopener noreferrer">
           <img src="/zenn.jpeg" alt="zenn" className='h-auto w-32'/>
         </a>
       </div>
