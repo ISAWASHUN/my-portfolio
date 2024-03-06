@@ -1,66 +1,78 @@
-// import React, { useRef } from 'react';
-// import { Canvas, useFrame, useThree, useLoader } from '@react-three/fiber';
-// import { TextureLoader } from 'three';
-// import { OrbitControls } from '@react-three/drei';
-// import { Texture } from 'three';
+import "../App.css"
+import { useRef, Suspense } from "react";
+import {
+  Text3D,
+  Center,
+  Stars,
+  Float,
+  Sparkles,
+  useMatcapTexture
+} from "@react-three/drei";
+import { Canvas, useThree } from "@react-three/fiber";
+import { Physics } from "@react-three/cannon";
+import { Mesh } from "three";
 
-// const Earth = () => {
-//   const meshRef = useRef<THREE.Mesh>(null);
-//   const earthTextureImg = '/soccer.jpeg';
-//   const texture = useLoader(TextureLoader, earthTextureImg) as Texture;
+function Hero() {
+    const [matcapTexture] = useMatcapTexture("161B1F_C7E0EC_90A5B3_7B8C9B");
+    const ref = useRef<Mesh>(null);
+  
+    const { width: w, height: h } = useThree((state) => state.viewport);
+  
+    return (
+      <>
+        <Center scale={[-1, 1, 1]}>
+          <Physics gravity={[0, -10, 0]}>
+            <Float speed={1}>
+              <Text3D
+                position={[0, 3, -10]}
+                scale={[1, 1, 1]}
+                ref={ref}
+                size={w / 20}
+                font={"/gt.json"}
+                curveSegments={24}
+                bevelEnabled
+                bevelSize={0.08}
+                bevelThickness={0.03}
+                height={0.5}
+                lineHeight={1}
+                letterSpacing={0.3}
+              >
+                {`Welcome to \n my Portfolio!`}
+                <meshMatcapMaterial color="white" matcap={matcapTexture} />
+              </Text3D>
+            </Float>
+          </Physics>
+        </Center>
+      </>
+    );
+  }
 
-//   const radius = 5.5;
-//   const speed = 1.0;
-
-//   useFrame(({ clock }) => {
-//     const time = clock.getElapsedTime();
-//     if (meshRef.current) {
-//       meshRef.current.rotation.z += 0.01;
-//       meshRef.current.position.x = Math.sin(time * speed) * radius;
-//       meshRef.current.position.z = Math.cos(time * speed) * radius;
-//     }
-//   });
-
-//   return (
-//     <mesh ref={meshRef}>
-//       <sphereGeometry args={[2, 512, 512]} />
-//       <meshStandardMaterial map={texture} />
-//     </mesh>
-//   );
-// };
-
-// const Scene = () => {
-//   const { camera } = useThree();
-//   camera.position.z = 10; // カメラを地球の運動を見渡せるように後ろに設定
-
-//   return (
-//     <>
-//       <ambientLight intensity={0.5} />
-//       <pointLight position={[20, 10, 20]} />
-//       <Earth />
-//       <OrbitControls />
-//     </>
-//   );
-// };
-
-// export default function App() {
-//   return (
-//     <div className='canvas-container'>
-//       <Canvas>
-//         <Scene />
-//       </Canvas>
-//     </div>
-//   );
-// }
-
-// import React from 'react'
-
-// const Hero = () => {
-//   return (
-//     <div className="animated-text">
-//         Welcome to Shun Code
-//     </div>
-//   )
-// }
-
-// export default Hero
+export default function App() {
+  return (
+    <div className="scene">
+      <Canvas camera={{ position: [0, 0, -10], fov: 60 }}>
+        <Suspense fallback={"Loading"}>
+          <Stars
+            radius={100}
+            depth={100}
+            count={4000}
+            factor={4}
+            saturation={0}
+            fade
+            speed={0.2}
+          />
+          <Sparkles
+            count={300}
+            size={3}
+            speed={0.02}
+            opacity={1}
+            scale={10}
+            color="#fff3b0"
+          />
+          <Hero />
+        </Suspense>
+        <ambientLight intensity={0.6} color={"#dee2ff"} />
+      </Canvas>
+    </div>
+  );
+}
