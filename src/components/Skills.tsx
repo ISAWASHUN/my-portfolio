@@ -8,7 +8,7 @@ ChartJS.register(ArcElement, Tooltip, Legend, Title);
 const Skills = () => {
   return (
     <div className='mt-12 md:mt-48 px-4 md:px-0'>
-      <h1 className='text-4xl md:text-7xl text-center mb-10 font-bold text-gray-800'>My Skills</h1>
+      <h1 className='text-7xl mt-32 text-center mb-16 font-bold '>My Skills</h1>
       <div className='flex flex-col md:flex-row items-center justify-center gap-12 md:gap-12'>
         <div className="text-center">
           <div className="mb-4 w-100 h-100 inline-block">

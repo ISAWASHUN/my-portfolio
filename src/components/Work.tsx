@@ -15,7 +15,7 @@ const Work = () => {
   return (
     <div>
       <section className="p-4">
-        <div className="container mt-64 mx-auto">
+        <div className="container mt-32 mx-auto">
           <h2 className="text-7xl text-center font-bold">Work</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {WorksData.map((item: WorkerData) => (
