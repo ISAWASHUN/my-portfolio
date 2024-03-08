@@ -14,18 +14,19 @@ type WorkerData = {
 
 const Work = () => {
   return (
-    <div>
+    <div id='works'>
       <section className="p-4">
         <div className="container mt-32 mx-auto">
-          <h2 className="text-7xl text-center font-bold">Work</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+          <h2 className="text-7xl text-center font-bold">Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {WorksData.map((item: WorkerData) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, scale: 0.75 }} // 初期状態
-                animate={{ opacity: 1, scale: 1 }} // アニメーション後の状態
-                transition={{ duration: 0.5 }} // アニメーションの時間
-                className="bg-gray-300 w-80 p-4 rounded-lg flex flex-col mx-auto mt-16"
+                initial={{ opacity: 0, scale: 0.75 }}
+                animate={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.05, y: -10 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gray-300 w-96 p-4 rounded-lg flex flex-col mx-auto mt-16 shadow-lg"
               >
                 <div className='mb-4'>
                   <img src={item.img} alt={item.title} className="h-64 w-full object-cover rounded-lg" />
