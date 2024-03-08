@@ -15,37 +15,37 @@ import { Mesh } from "three";
 function Hero() {
     const [matcapTexture] = useMatcapTexture("161B1F_C7E0EC_90A5B3_7B8C9B");
     const ref = useRef<Mesh>(null);
-  
-    const { width: w, height: h } = useThree((state) => state.viewport);
-  
+
+    const { width: w} = useThree((state) => state.viewport);
+
     return (
-      <>
+    <>
         <Center scale={[-1, 1, 1]}>
-          <Physics gravity={[0, -10, 0]}>
-            <Float speed={1}>
-              <Text3D
-                position={[0, 3, -10]}
-                scale={[1, 1, 1]}
-                ref={ref}
-                size={w / 20}
-                font={"/gt.json"}
-                curveSegments={24}
-                bevelEnabled
-                bevelSize={0.08}
-                bevelThickness={0.03}
-                height={0.5}
-                lineHeight={1}
-                letterSpacing={0.3}
-              >
-                {`Welcome to \n my Portfolio!`}
-                <meshMatcapMaterial color="white" matcap={matcapTexture} />
-              </Text3D>
-            </Float>
-          </Physics>
+            <Physics gravity={[0, -10, 0]}>
+                <Float speed={1}>
+                    <Text3D
+                        position={[0, 3, -10]}
+                        scale={[1, 1, 1]}
+                        ref={ref}
+                        size={w / 20}
+                        font={"/gt.json"}
+                        curveSegments={24}
+                        bevelEnabled
+                        bevelSize={0.08}
+                        bevelThickness={0.03}
+                        height={0.5}
+                        lineHeight={1}
+                        letterSpacing={0.3}
+                    >
+                        {`Welcome to \n my Portfolio!`}
+                        <meshMatcapMaterial color="white" matcap={matcapTexture} />
+                    </Text3D>
+                </Float>
+            </Physics>
         </Center>
-      </>
+    </>
     );
-  }
+}
 
 export default function App() {
   return (
