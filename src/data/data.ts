@@ -62,6 +62,7 @@ export const optionsFrontend: ChartOptions<"pie"> = {
     title: {
       display: true,
       text: 'Frontend Skills',
+      color: 'black',
       padding: {
         top: 10,
         bottom: 30
@@ -81,6 +82,7 @@ export const optionsBackend: ChartOptions<"pie"> = {
     title: {
       display: true,
       text: 'Backend Skills',
+      color: 'black',
       padding: {
         top: 10,
         bottom: 30
@@ -100,6 +102,7 @@ export const optionsDevops: ChartOptions<"pie"> = {
     title: {
       display: true,
       text: 'DevOps Skills',
+      color: 'black',
       padding: {
         top: 10,
         bottom: 30
@@ -112,10 +115,10 @@ export const optionsDevops: ChartOptions<"pie"> = {
 };
 
 export const frontendData = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: ['React', 'Vue', 'Typescript', 'javascript', 'HTML', 'CSS'],
   datasets: [
     {
-      data: [12, 19, 3, 5, 2, 3],
+      data: [10, 10, 5, 3, 3, 3],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -138,10 +141,10 @@ export const frontendData = {
 };
 
 export const backendData = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: ['Ruby on Rails', 'PHP', 'Go', 'Python'],
   datasets: [
     {
-      data: [12, 19, 3, 5, 2, 3],
+      data: [25, 10, 10, 5],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -164,10 +167,10 @@ export const backendData = {
 };
 
 export const DevopsData = {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  labels: ['Git', 'AWS', 'Terraform', 'Docker', 'Postgresql'],
   datasets: [
     {
-      data: [12, 19, 3, 5, 2, 3],
+      data: [10, 10, 10, 10, 10],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
