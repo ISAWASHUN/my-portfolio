@@ -61,7 +61,7 @@ const TimeLine = () => {
         >
           <h3 className="vertical-timeline-element-title">社会人</h3>
           <p>
-            医療系の会社でフルスタックエンジニアとして勤務
+            M3 Carrerでフルスタックエンジニアとして勤務
             Ruby on Rails, Vue, AWSなどを使って転職サイトや採用支援のSassを作成
           </p>
         </VerticalTimelineElement>

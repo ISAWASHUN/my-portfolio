@@ -21,37 +21,28 @@ export const headerData = [
     title: 'Contact',
     link: '#contact',
   },
+  {
+    id: 5,
+    title: 'Career Sheet',
+    link: 'https://melted-uranium-85b.notion.site/f8dd920d59574c7586a44e8e8b87dea6'
+  }
 ];
 
 export const WorksData = [
   {
     id: 1,
-    title: 'work1',
-    img: '/profile_logo.png',
+    title: 'ポートフォリオサイト',
+    img: '/portfolio-site.png',
     link: 'https://www.google.com',
-    github: 'https://www.google.com',
+    github: 'https://github.com/ISAWASHUN/my-portfolio',
   },
   {
     id: 2,
-    title: 'work2',
-    img: '/profile_logo.png',
-    link: 'https://www.google.com',
-    github: 'https://www.google.com',
-  },
-  {
-    id: 3,
-    title: 'work3',
-    img: '/profile_logo.png',
-    link: 'https://www.google.com',
-    github: 'https://www.google.com',
-  },
-  {
-    id: 4,
-    title: 'work4',
-    img: '/profile_logo.png',
-    link: 'https://www.google.com',
-    github: 'https://www.google.com',
-  },
+    title: 'ポケモン図鑑',
+    img: '/pokemon.png',
+    link: 'https://pokedex-pearl-one.vercel.app/',
+    github: 'https://github.com/ISAWASHUN/Pokedex',
+  }
 ]
 
 export const optionsFrontend: ChartOptions<"pie"> = {
